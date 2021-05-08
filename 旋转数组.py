@@ -7,7 +7,7 @@ def rotate(nums, k):
     Do not return anything, modify nums in-place instead.
     """
     box = []
-    k = k % len(nums)
+    k = k % len(nums) #防止出现k大于数组长度，无法操作
     for i in nums[len(nums)-k:]:
         box.append(i)
     box.extend(nums[0:len(nums)-k])
